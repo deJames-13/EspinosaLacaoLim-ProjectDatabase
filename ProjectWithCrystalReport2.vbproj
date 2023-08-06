@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{722491A3-B6AD-4BCA-9531-288E706A2894}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProjectWithCrystalReport2.My.MyApplication</StartupObject>
+    <RootNamespace>ProjectWithCrystalReport2</RootNamespace>
+    <AssemblyName>ProjectWithCrystalReport2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProjectWithCrystalReport2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProjectWithCrystalReport2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Public|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>Public\</OutputPath>
+    <DocumentationFile>ProjectWithCrystalReport2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>storeIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="mysql.data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Apps\mysql-for-visualstudio-2.0.5-noinstall\v461\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="App\My Modules\ImageFileHandler.vb" />
+    <Compile Include="App\View Forms\Admin\Employees\EmployeeInfoDialog.Designer.vb">
+      <DependentUpon>EmployeeInfoDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Employees\EmployeeInfoDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\ScheduleDialog.Designer.vb">
+      <DependentUpon>ScheduleDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\ScheduleDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Inventory\InventoryItemDialog.Designer.vb">
+      <DependentUpon>InventoryItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Inventory\InventoryItemDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\AdminHome.Designer.vb">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\AdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Employees\EmployeesPage.Designer.vb">
+      <DependentUpon>EmployeesPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Employees\EmployeesPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Inventory\InventoryPage.Designer.vb">
+      <DependentUpon>InventoryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Inventory\InventoryPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Payroll\PayrollPage.Designer.vb">
+      <DependentUpon>PayrollPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Payroll\PayrollPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Reports\ReportsPage.Designer.vb">
+      <DependentUpon>ReportsPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Reports\ReportsPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\My Modules\MySqlController.vb" />
+    <Compile Include="App\My Modules\WindowPageManager.vb" />
+    <Compile Include="App\My Modules\AdminQueries.vb" />
+    <Compile Include="App\My Modules\HomeQueries.vb" />
+    <Compile Include="App\My Modules\LoginController.vb" />
+    <Compile Include="App\My Modules\Ordering.vb" />
+    <Compile Include="App\View Forms\Admin\Orders\ManageOrdersPage.Designer.vb">
+      <DependentUpon>ManageOrdersPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Orders\ManageOrdersPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\SchedulePost.Designer.vb">
+      <DependentUpon>SchedulePost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\SchedulePost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\SchedulesPage.Designer.vb">
+      <DependentUpon>SchedulesPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Admin\Schedules\SchedulesPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\ViewReceiptDialog.Designer.vb">
+      <DependentUpon>ViewReceiptDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\ViewReceiptDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Cart\CartItem.vb" />
+    <Compile Include="App\View Forms\Customer\Cart\CartRow.Designer.vb">
+      <DependentUpon>CartRow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Cart\CartRow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Elements\_components1.Designer.vb">
+      <DependentUpon>_components1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Elements\_components1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\OrderingDialog.Designer.vb">
+      <DependentUpon>OrderingDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\OrderingDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\ProductCard.vb">
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Elements\_styledcomponents1.Designer.vb">
+      <DependentUpon>_styledcomponents1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Elements\_styledcomponents1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\ViewItemDialog.Designer.vb">
+      <DependentUpon>ViewItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\ViewItemDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Cart\CartPage.Designer.vb">
+      <DependentUpon>CartPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Cart\CartPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\FilterBar.Designer.vb">
+      <DependentUpon>FilterBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\FilterBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\HomePage.Designer.vb">
+      <DependentUpon>HomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\HomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\My Modules\HomeController.vb">
+      <SubType>Module</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\OrderPage.Designer.vb">
+      <DependentUpon>OrderPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Order\OrderPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Profile\ProfilePage.Designer.vb">
+      <DependentUpon>ProfilePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Profile\ProfilePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Settings\SettingsPage.Designer.vb">
+      <DependentUpon>SettingsPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Settings\SettingsPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\ShopPage.Designer.vb">
+      <DependentUpon>ShopPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\Customer\Shop\ShopPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\LogIn\LogInForm.Designer.vb">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\LogIn\LogInForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpPage1.Designer.vb">
+      <DependentUpon>SignUpPage1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpPage1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpPage2.Designer.vb">
+      <DependentUpon>SignUpPage2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpPage2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpTemp.Designer.vb">
+      <DependentUpon>SignUpTemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\SignUp\SignUpTemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\View Forms\MainApplication.Designer.vb">
+      <DependentUpon>MainApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\View Forms\MainApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Path\orders_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>orders_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports Path\product_report.vb">
+      <DependentUpon>product_report.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports Path\view_receipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>view_receipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App\View Forms\Admin\Employees\EmployeeInfoDialog.resx">
+      <DependentUpon>EmployeeInfoDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Schedules\ScheduleDialog.resx">
+      <DependentUpon>ScheduleDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Inventory\InventoryItemDialog.resx">
+      <DependentUpon>InventoryItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\AdminHome.resx">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Employees\EmployeesPage.resx">
+      <DependentUpon>EmployeesPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Inventory\InventoryPage.resx">
+      <DependentUpon>InventoryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Payroll\PayrollPage.resx">
+      <DependentUpon>PayrollPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Reports\ReportsPage.resx">
+      <DependentUpon>ReportsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Orders\ManageOrdersPage.resx">
+      <DependentUpon>ManageOrdersPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Schedules\SchedulePost.resx">
+      <DependentUpon>SchedulePost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Admin\Schedules\SchedulesPage.resx">
+      <DependentUpon>SchedulesPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Order\ViewReceiptDialog.resx">
+      <DependentUpon>ViewReceiptDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Cart\CartRow.resx">
+      <DependentUpon>CartRow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Elements\_components1.resx">
+      <DependentUpon>_components1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Order\OrderingDialog.resx">
+      <DependentUpon>OrderingDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Elements\_styledcomponents1.resx">
+      <DependentUpon>_styledcomponents1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Shop\ViewItemDialog.resx">
+      <DependentUpon>ViewItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Cart\CartPage.resx">
+      <DependentUpon>CartPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Shop\FilterBar.resx">
+      <DependentUpon>FilterBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\HomePage.resx">
+      <DependentUpon>HomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Order\OrderPage.resx">
+      <DependentUpon>OrderPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Profile\ProfilePage.resx">
+      <DependentUpon>ProfilePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Settings\SettingsPage.resx">
+      <DependentUpon>SettingsPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\Customer\Shop\ShopPage.resx">
+      <DependentUpon>ShopPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\LogIn\LogInForm.resx">
+      <DependentUpon>LogInForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\SignUp\SignUpPage1.resx">
+      <DependentUpon>SignUpPage1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\SignUp\SignUpPage2.resx">
+      <DependentUpon>SignUpPage2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\SignUp\SignUpTemp.resx">
+      <DependentUpon>SignUpTemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\View Forms\MainApplication.resx">
+      <DependentUpon>MainApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Path\orders_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>orders_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Path\product_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>product_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports Path\view_receipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>view_receipt.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Public\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baclground_portrait_2.jpg" />
+    <None Include="Resources\baclground_portrait_1.jpg" />
+    <None Include="Resources\icons8-closed-eye-20.png" />
+    <None Include="Resources\icons8-eye-20.png" />
+    <None Include="Resources\icons8-cart-64.png" />
+    <None Include="Resources\icons8-cart-20.png" />
+    <None Include="Resources\icons8-subtract-96.png" />
+    <None Include="Resources\icons8-add-20.png" />
+    <None Include="Resources\icons8-minus-20.png" />
+    <None Include="Resources\icons8-add-100.png" />
+    <None Include="Resources\icons8-minus-100.png" />
+    <None Include="Resources\icons8-plus-100.png" />
+    <None Include="Resources\icons8-minus-1001.png" />
+    <None Include="Resources\icons8-plus-96.png" />
+    <None Include="Resources\icons8-minus-96.png" />
+    <None Include="Resources\icons8-add-new-96.png" />
+    <None Include="Resources\icons8-indeterminate-checkbox-96.png" />
+    <None Include="Resources\icons8-cart-64-1.png" />
+    <None Include="Resources\icons8-module-100.png" />
+    <None Include="Resources\icons8-no-image-90.png" />
+    <None Include="Resources\icons8-no-image-30.png" />
+    <None Include="Resources\icons8-unchecked-checkbox-96.png" />
+    <None Include="Resources\icons8-unchecked-checkbox-30.png" />
+    <None Include="Resources\icons8-remove-15.png" />
+    <None Include="Resources\icons8-remove-20.png" />
+    <None Include="Resources\icons8-select-all-20 %281%29.png" />
+    <None Include="Resources\icons8-checked-checkbox-30.png" />
+    <None Include="Resources\ordersBtn.png" />
+    <None Include="Resources\icons8-close-15.png" />
+    <None Include="Resources\icons8-user-64.png" />
+    <None Include="Resources\icons8-user-90.png" />
+    <None Include="Resources\icons8-ascending-sorting-15.png" />
+    <None Include="Resources\icons8-descending-sorting-15.png" />
+    <None Include="Resources\icons8-administrator-100.png" />
+    <None Include="Resources\icons8-customer-100.png" />
+    <None Include="Resources\welcomeBannerTitle.png" />
+    <None Include="Resources\welcomeBannerTitle1.png" />
+    <None Include="Resources\welcomeBannerTitle2.png" />
+    <None Include="Resources\welcomeBannerTitle3.png" />
+    <None Include="Resources\icons8-edit-20.png" />
+    <None Include="Resources\settingsBtn.png" />
+    <None Include="Resources\signinBtn.png" />
+    <None Include="Resources\simpleLogo.png" />
+    <None Include="Resources\logo198x100.png" />
+    <None Include="Resources\inventoryBtn.png" />
+    <None Include="Resources\reportsBtn.png" />
+    <None Include="Resources\employeeBtn.png" />
+    <None Include="Resources\icons8-employees-100.png" />
+    <None Include="Resources\icons8-reports-100.png" />
+    <None Include="Resources\icons8-payroll-100.png" />
+    <None Include="Resources\icons8-product-100.png" />
+    <None Include="Resources\icons8-inventory-100.png" />
+    <None Include="Resources\icons8-plus-1001.png" />
+    <None Include="Resources\icons8-add-201.png" />
+    <None Include="Resources\payrollBtn.png" />
+    <None Include="Resources\icons8-employee-100.png" />
+    <None Include="Resources\icons8-order-100.png" />
+    <None Include="Resources\orderBtn1.png" />
+    <None Include="Resources\icons8-cancel-20.png" />
+    <None Include="Resources\icons8-shipping-20.png" />
+    <None Include="Resources\icons8-delivered-20.png" />
+    <None Include="Resources\icons8-receipt-100.png" />
+    <None Include="Resources\orderBtn.png" />
+    <None Include="Resources\orderBtn2.png" />
+    <None Include="Resources\icons8-refresh-20.png" />
+    <None Include="Resources\profileBtn.png" />
+    <None Include="Resources\icons8-schedule-100.png" />
+    <None Include="Resources\scheduleBtn.png" />
+    <Content Include="storeIcon.ico" />
+    <Content Include="window_forms.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
