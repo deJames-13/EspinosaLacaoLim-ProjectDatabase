@@ -337,9 +337,8 @@ Partial Class ReportsPage
     Friend WithEvents btnOrdersReport As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnProductReport As Button
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnOrdersReport As Button
     Friend WithEvents Panel6 As Panel
     Friend WithEvents cmbTables As ComboBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents Panel8 As Panel
 End Class

@@ -982,8 +982,6 @@ Partial Class InventoryItemDialog
     Friend WithEvents Panel5 As Panel
     Friend WithEvents itemImage As PictureBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents category As TextBox
-    Friend WithEvents brand As TextBox
     Friend WithEvents Panel13 As Panel
     Friend WithEvents image_dir As TextBox
     Friend WithEvents Label1 As Label
