@@ -25,8 +25,16 @@ Partial Class ReportsPage
         Me.windowWrapper = New System.Windows.Forms.Panel()
         Me.contentWrapper = New System.Windows.Forms.Panel()
         Me.contentContainer = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnOrdersReport = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnProductReport = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.reportWizard1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.pageTitle = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -42,15 +50,16 @@ Partial Class ReportsPage
         Me.windowWrapper.SuspendLayout()
         Me.contentWrapper.SuspendLayout()
         Me.contentContainer.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.titleIcon, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel9.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'windowWrapper
@@ -79,6 +88,7 @@ Partial Class ReportsPage
         '
         'contentContainer
         '
+        Me.contentContainer.Controls.Add(Me.Panel8)
         Me.contentContainer.Controls.Add(Me.Panel5)
         Me.contentContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.contentContainer.Location = New System.Drawing.Point(5, 76)
@@ -87,41 +97,110 @@ Partial Class ReportsPage
         Me.contentContainer.Size = New System.Drawing.Size(934, 540)
         Me.contentContainer.TabIndex = 25
         '
+        '
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.Transparent
+        Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel9.Controls.Add(Me.TableLayoutPanel1)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Padding = New System.Windows.Forms.Padding(5)
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 5)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.AutoSize = True
+        Me.Panel3.BackColor = System.Drawing.Color.Transparent
+        Me.Panel3.Controls.Add(Me.btnOrdersReport)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Panel3.TabIndex = 15
+        '
+        'btnOrdersReport
+        '
+        Me.btnOrdersReport.AutoSize = True
+        Me.btnOrdersReport.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOrdersReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.btnOrdersReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOrdersReport.Font = New System.Drawing.Font("Lexend", 8.25!)
+        Me.btnOrdersReport.Location = New System.Drawing.Point(5, 5)
+        Me.btnOrdersReport.Name = "btnOrdersReport"
+        Me.btnOrdersReport.TabIndex = 1
+        Me.btnOrdersReport.Text = "Orders Report"
+        Me.btnOrdersReport.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoSize = True
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.btnProductReport)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Panel1.TabIndex = 14
+        '
+        'btnProductReport
+        '
+        Me.btnProductReport.AutoSize = True
+        Me.btnProductReport.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnProductReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.btnProductReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProductReport.Font = New System.Drawing.Font("Lexend", 8.25!)
+        Me.btnProductReport.Location = New System.Drawing.Point(5, 5)
+        Me.btnProductReport.Name = "btnProductReport"
+        Me.btnProductReport.TabIndex = 1
+        Me.btnProductReport.Text = "Product Report"
+        Me.btnProductReport.UseVisualStyleBackColor = True
+        '
         'Panel5
         '
         Me.Panel5.Controls.Add(Me.Panel10)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(10, 10)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
-        Me.Panel5.Size = New System.Drawing.Size(914, 530)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(10, 0, 10, 0)
+        Me.Panel5.Size = New System.Drawing.Size(914, 417)
         Me.Panel5.TabIndex = 30
         '
         'Panel10
         '
         Me.Panel10.Controls.Add(Me.reportWizard1)
-        Me.Panel10.Controls.Add(Me.Panel9)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel10.Location = New System.Drawing.Point(0, 0)
+        Me.Panel10.Location = New System.Drawing.Point(10, 0)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Padding = New System.Windows.Forms.Padding(3)
-        Me.Panel10.Size = New System.Drawing.Size(914, 525)
+        Me.Panel10.Size = New System.Drawing.Size(894, 417)
         Me.Panel10.TabIndex = 0
         '
-        'Panel7
+        'reportWizard1
         '
-        Me.Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Panel7.Controls.Add(Me.pageTitle)
-        Me.Panel7.Controls.Add(Me.Panel2)
-        Me.Panel7.Controls.Add(Me.Panel21)
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(5, 5)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Padding = New System.Windows.Forms.Padding(2)
-        Me.Panel7.Size = New System.Drawing.Size(934, 71)
-        Me.Panel7.TabIndex = 23
-        '
-        'pageTitle
+        Me.reportWizard1.ActiveViewIndex = -1
+        Me.reportWizard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.reportWizard1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.reportWizard1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.reportWizard1.Location = New System.Drawing.Point(3, 3)
+        Me.reportWizard1.Name = "reportWizard1"
         '
         Me.pageTitle.AutoSize = True
         Me.pageTitle.BackColor = System.Drawing.Color.Transparent
@@ -167,101 +246,46 @@ Partial Class ReportsPage
         Me.Panel21.Size = New System.Drawing.Size(930, 3)
         Me.Panel21.TabIndex = 1
         '
-        'Panel9
+        'Label7
         '
-        Me.Panel9.BackColor = System.Drawing.Color.Transparent
-        Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel9.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel9.Location = New System.Drawing.Point(3, 452)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(5)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel9.Size = New System.Drawing.Size(908, 70)
-        Me.Panel9.TabIndex = 34
+        Me.Label7.AutoSize = True
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label7.Font = New System.Drawing.Font("Lexend Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 3)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(69, 19)
+        Me.Label7.TabIndex = 4
+        Me.Label7.Text = "View Table"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label7.Visible = False
         '
-        'TableLayoutPanel1
+        'cmbTables
         '
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 5)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(896, 58)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.cmbTables.BackColor = System.Drawing.Color.White
+        Me.cmbTables.Dock = System.Windows.Forms.DockStyle.Left
+        Me.cmbTables.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbTables.Font = New System.Drawing.Font("Lexend Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbTables.FormattingEnabled = True
+        Me.cmbTables.ItemHeight = 19
+        Me.cmbTables.Location = New System.Drawing.Point(72, 3)
+        Me.cmbTables.Name = "cmbTables"
+        Me.cmbTables.Size = New System.Drawing.Size(129, 27)
+        Me.cmbTables.TabIndex = 5
+        Me.cmbTables.Visible = False
         '
-        'Panel3
+        'Panel6
         '
-        Me.Panel3.AutoSize = True
-        Me.Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Panel3.Controls.Add(Me.btnOrdersReport)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(453, 5)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel3.Size = New System.Drawing.Size(214, 48)
-        Me.Panel3.TabIndex = 15
-        '
-        'btnOrdersReport
-        '
-        Me.btnOrdersReport.AutoSize = True
-        Me.btnOrdersReport.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOrdersReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.btnOrdersReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOrdersReport.Font = New System.Drawing.Font("Lexend", 8.25!)
-        Me.btnOrdersReport.Location = New System.Drawing.Point(5, 5)
-        Me.btnOrdersReport.Name = "btnOrdersReport"
-        Me.btnOrdersReport.Size = New System.Drawing.Size(204, 38)
-        Me.btnOrdersReport.TabIndex = 1
-        Me.btnOrdersReport.Text = "Orders Report"
-        Me.btnOrdersReport.UseVisualStyleBackColor = True
-        '
-        'Panel1
-        '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.btnProductReport)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(677, 5)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(214, 48)
-        Me.Panel1.TabIndex = 14
-        '
-        'btnProductReport
-        '
-        Me.btnProductReport.AutoSize = True
-        Me.btnProductReport.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnProductReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.btnProductReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProductReport.Font = New System.Drawing.Font("Lexend", 8.25!)
-        Me.btnProductReport.Location = New System.Drawing.Point(5, 5)
-        Me.btnProductReport.Name = "btnProductReport"
-        Me.btnProductReport.Size = New System.Drawing.Size(204, 38)
-        Me.btnProductReport.TabIndex = 1
-        Me.btnProductReport.Text = "Product Report"
-        Me.btnProductReport.UseVisualStyleBackColor = True
-        '
-        'reportWizard1
-        '
-        Me.reportWizard1.ActiveViewIndex = -1
-        Me.reportWizard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.reportWizard1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.reportWizard1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.reportWizard1.Location = New System.Drawing.Point(3, 3)
-        Me.reportWizard1.Name = "reportWizard1"
-        Me.reportWizard1.Size = New System.Drawing.Size(908, 449)
-        Me.reportWizard1.TabIndex = 35
+        Me.Panel6.BackColor = System.Drawing.Color.Transparent
+        Me.Panel6.Controls.Add(Me.cmbTables)
+        Me.Panel6.Controls.Add(Me.Label7)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel6.Location = New System.Drawing.Point(5, 5)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Padding = New System.Windows.Forms.Padding(3)
+        Me.Panel6.Size = New System.Drawing.Size(904, 30)
+        Me.Panel6.TabIndex = 15
         '
         'ReportsPage
         '
@@ -277,12 +301,6 @@ Partial Class ReportsPage
         Me.windowWrapper.ResumeLayout(False)
         Me.contentWrapper.ResumeLayout(False)
         Me.contentContainer.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        CType(Me.titleIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -290,6 +308,14 @@ Partial Class ReportsPage
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.titleIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -301,14 +327,19 @@ Partial Class ReportsPage
     Friend WithEvents Panel21 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel10 As Panel
+    Friend WithEvents reportWizard1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents pageTitle As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents titleIcon As PictureBox
-    Friend WithEvents reportWizard1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents Panel9 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnOrdersReport As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnProductReport As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnOrdersReport As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents cmbTables As ComboBox
+    Friend WithEvents Label7 As Label
 End Class

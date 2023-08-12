@@ -134,6 +134,7 @@
     ' DATA TO CONTROLS
     '
     Private Sub UnLoadObjects()
+
         btnEditProduct.Text = "Edit"
         btnDelete.Text = "Delete"
         btnEditProduct.BackColor = Color.LightSteelBlue

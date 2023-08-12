@@ -65,6 +65,11 @@ Partial Class _components1
         Me.itemPrice = New System.Windows.Forms.Label()
         Me.imgBox = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Panel18 = New System.Windows.Forms.Panel()
+        Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.first_name = New System.Windows.Forms.TextBox()
+        Me.Panel20 = New System.Windows.Forms.Panel()
         Me.windowWrapper.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.Panel18.SuspendLayout()
@@ -87,6 +92,9 @@ Partial Class _components1
         Me.quantPanel.SuspendLayout()
         Me.infoPanel.SuspendLayout()
         CType(Me.imgBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel17.SuspendLayout()
+        Me.Panel18.SuspendLayout()
+        Me.Panel19.SuspendLayout()
         Me.SuspendLayout()
         '
         'windowWrapper
@@ -617,6 +625,62 @@ Partial Class _components1
         Me.Panel2.Size = New System.Drawing.Size(200, 3)
         Me.Panel2.TabIndex = 28
         '
+        'Panel17
+        '
+        Me.Panel17.Controls.Add(Me.Panel18)
+        Me.Panel17.Location = New System.Drawing.Point(14, 384)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Padding = New System.Windows.Forms.Padding(10)
+        Me.Panel17.Size = New System.Drawing.Size(330, 64)
+        Me.Panel17.TabIndex = 40
+        '
+        'Panel18
+        '
+        Me.Panel18.BackColor = System.Drawing.Color.GhostWhite
+        Me.Panel18.Controls.Add(Me.Panel19)
+        Me.Panel18.Controls.Add(Me.Panel20)
+        Me.Panel18.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel18.Location = New System.Drawing.Point(10, 10)
+        Me.Panel18.Name = "Panel18"
+        Me.Panel18.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.Panel18.Size = New System.Drawing.Size(310, 44)
+        Me.Panel18.TabIndex = 39
+        '
+        'Panel19
+        '
+        Me.Panel19.BackColor = System.Drawing.Color.GhostWhite
+        Me.Panel19.Controls.Add(Me.first_name)
+        Me.Panel19.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel19.Location = New System.Drawing.Point(0, 5)
+        Me.Panel19.Margin = New System.Windows.Forms.Padding(10)
+        Me.Panel19.Name = "Panel19"
+        Me.Panel19.Padding = New System.Windows.Forms.Padding(10, 5, 10, 0)
+        Me.Panel19.Size = New System.Drawing.Size(310, 30)
+        Me.Panel19.TabIndex = 11
+        '
+        'first_name
+        '
+        Me.first_name.BackColor = System.Drawing.Color.GhostWhite
+        Me.first_name.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.first_name.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.first_name.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.first_name.Location = New System.Drawing.Point(10, 5)
+        Me.first_name.Margin = New System.Windows.Forms.Padding(5)
+        Me.first_name.MaxLength = 100
+        Me.first_name.Name = "first_name"
+        Me.first_name.Size = New System.Drawing.Size(290, 20)
+        Me.first_name.TabIndex = 3
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.Black
+        Me.Panel20.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel20.Location = New System.Drawing.Point(0, 41)
+        Me.Panel20.Margin = New System.Windows.Forms.Padding(10)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(310, 3)
+        Me.Panel20.TabIndex = 1
+        '
         '_components1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -657,6 +721,10 @@ Partial Class _components1
         Me.infoPanel.ResumeLayout(False)
         Me.infoPanel.PerformLayout()
         CType(Me.imgBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel18.ResumeLayout(False)
+        Me.Panel19.ResumeLayout(False)
+        Me.Panel19.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

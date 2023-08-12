@@ -37,7 +37,6 @@ Partial Class InventoryItemDialog
         Me.category = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel19 = New System.Windows.Forms.Panel()
-        Me.brand = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel12 = New System.Windows.Forms.Panel()
@@ -200,7 +199,6 @@ Partial Class InventoryItemDialog
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.Panel22, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(5, 358)
         Me.TableLayoutPanel4.MaximumSize = New System.Drawing.Size(600, 0)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.Padding = New System.Windows.Forms.Padding(5, 20, 0, 5)
@@ -267,7 +265,6 @@ Partial Class InventoryItemDialog
         Me.TableLayoutPanel3.Padding = New System.Windows.Forms.Padding(5, 20, 0, 5)
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(574, 86)
         Me.TableLayoutPanel3.TabIndex = 37
         '
         'Panel14
@@ -280,7 +277,6 @@ Partial Class InventoryItemDialog
         Me.Panel14.Margin = New System.Windows.Forms.Padding(0, 0, 20, 0)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel14.Size = New System.Drawing.Size(265, 61)
         Me.Panel14.TabIndex = 32
         '
         'category
@@ -294,8 +290,6 @@ Partial Class InventoryItemDialog
         Me.category.Location = New System.Drawing.Point(5, 29)
         Me.category.MaximumSize = New System.Drawing.Size(200, 0)
         Me.category.Name = "category"
-        Me.category.Size = New System.Drawing.Size(200, 27)
-        Me.category.TabIndex = 4
         '
         'Label6
         '
@@ -321,7 +315,6 @@ Partial Class InventoryItemDialog
         Me.Panel19.Margin = New System.Windows.Forms.Padding(0, 0, 20, 0)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel19.Size = New System.Drawing.Size(264, 61)
         Me.Panel19.TabIndex = 31
         '
         'brand
@@ -335,8 +328,6 @@ Partial Class InventoryItemDialog
         Me.brand.Location = New System.Drawing.Point(5, 29)
         Me.brand.MaximumSize = New System.Drawing.Size(200, 0)
         Me.brand.Name = "brand"
-        Me.brand.Size = New System.Drawing.Size(200, 27)
-        Me.brand.TabIndex = 4
         '
         'Label8
         '
@@ -593,7 +584,6 @@ Partial Class InventoryItemDialog
         Me.Panel20.AutoSize = True
         Me.Panel20.Controls.Add(Me.Panel23)
         Me.Panel20.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel20.Location = New System.Drawing.Point(5, 330)
         Me.Panel20.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Padding = New System.Windows.Forms.Padding(5)
@@ -707,7 +697,6 @@ Partial Class InventoryItemDialog
         Me.Panel13.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel13.Size = New System.Drawing.Size(270, 35)
         Me.Panel13.TabIndex = 37
         '
         'image_dir
@@ -720,7 +709,6 @@ Partial Class InventoryItemDialog
         Me.image_dir.Multiline = True
         Me.image_dir.Name = "image_dir"
         Me.image_dir.ReadOnly = True
-        Me.image_dir.Size = New System.Drawing.Size(175, 25)
         Me.image_dir.TabIndex = 34
         Me.image_dir.WordWrap = False
         '
@@ -994,6 +982,8 @@ Partial Class InventoryItemDialog
     Friend WithEvents Panel5 As Panel
     Friend WithEvents itemImage As PictureBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents category As TextBox
+    Friend WithEvents brand As TextBox
     Friend WithEvents Panel13 As Panel
     Friend WithEvents image_dir As TextBox
     Friend WithEvents Label1 As Label

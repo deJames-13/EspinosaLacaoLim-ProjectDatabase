@@ -57,7 +57,7 @@
             Next
         Catch ex As Exception
 
-        End Try
+    End Try
     End Sub
 
     Public Sub ToggleControls(ByRef controls As Control(), state As Boolean, Optional visible As Boolean = False)

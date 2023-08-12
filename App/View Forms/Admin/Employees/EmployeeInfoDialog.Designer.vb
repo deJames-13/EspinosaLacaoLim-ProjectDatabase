@@ -1163,7 +1163,6 @@ Partial Class EmployeeInfoDialog
         Me.Panel9.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel9.Size = New System.Drawing.Size(290, 34)
         Me.Panel9.TabIndex = 40
         '
         'image_dir
@@ -1176,7 +1175,6 @@ Partial Class EmployeeInfoDialog
         Me.image_dir.Multiline = True
         Me.image_dir.Name = "image_dir"
         Me.image_dir.ReadOnly = True
-        Me.image_dir.Size = New System.Drawing.Size(195, 24)
         Me.image_dir.TabIndex = 34
         Me.image_dir.WordWrap = False
         '
@@ -1192,7 +1190,6 @@ Partial Class EmployeeInfoDialog
         Me.Label8.Size = New System.Drawing.Size(85, 24)
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Image Path"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Panel28
         '
